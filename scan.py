@@ -4,6 +4,7 @@
 # First demo conducted 12Apr-2014 @OWASP Chapter Egypt
 # https://www.owasp.org/index.php/Cairo
 import re
+import sys
 import urllib
 from headers import *
 from vulnz import *
@@ -27,9 +28,11 @@ print ga.green+'''
         '''+ga.end
 
 def urls_or_list():
-	url_or_list = raw_input(" [!] Scan URL or List of URLs? [1/2]: ")
+	#url_or_list = raw_input(" [!] Scan URL or List of URLs? [1/2]: ")
+	url_or_list = "1"
 	if url_or_list == "1":
-	 	 url = raw_input(" [!] Enter the URL: ")
+		 url = sys.argv[1]
+	 	 #url = raw_input(" [!] Enter the URL: ")
 		 #if not url.startswith("http://"):
 		     #Thanks to Nu11 for the HTTP checker
                      #print ga.red+'''\n Invalid URL, Please Make Sure That The URL Starts With \"http://\" \n'''+ga.end
