@@ -31,7 +31,7 @@ def urls_or_list():
 	#url_or_list = raw_input(" [!] Scan URL or List of URLs? [1/2]: ")
 	url_or_list = "1"
 	if url_or_list == "1":
-		 url = sys.argv[0]
+		 url = sys.argv[1]
 	 	 #url = raw_input(" [!] Enter the URL: ")
 		 #if not url.startswith("http://"):
 		     #Thanks to Nu11 for the HTTP checker
